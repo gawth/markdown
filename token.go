@@ -104,6 +104,7 @@ type HeadingOpen struct {
 	HLevel int
 	Map    [2]int
 	Lvl    int
+	ID     string
 }
 
 type HeadingClose struct {

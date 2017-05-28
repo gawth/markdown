@@ -47,6 +47,7 @@ func ruleHeading(s *StateBlock, startLine, _ int, silent bool) (_ bool) {
 	s.PushOpeningToken(&HeadingOpen{
 		HLevel: level,
 		Map:    [2]int{startLine, s.Line},
+		ID:     strings.TrimSpace(src[pos:max]),
 	})
 
 	if pos < max {

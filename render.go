@@ -110,6 +110,7 @@ func (r *Renderer) renderToken(tokens []Token, idx int, options RenderOptions) {
 	case *HeadingOpen:
 		r.w.WriteString("<h")
 		r.w.WriteByte("0123456789"[tok.HLevel])
+		r.w.WriteString(" ID=\"" + tok.ID + "\"")
 		r.w.WriteByte('>')
 
 	case *Hr:
